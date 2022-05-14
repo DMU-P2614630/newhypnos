@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Player</title>
+  <style>
+#playAudio {
+  border:  2px solid #e7e7e7;
+  color: gray;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+
+</head>
+
+
+<body>
+
+
+  <audio id="audio">
+  <!-- <audio id="audio" controls> -->
+    <source id="audioSource" hidden src="">
+    </source>
+    Your browser does not support the audio format
+  </audio>
+
+
+
+<!---//// This is the URL of the page, which contains the player parameters
+  //  let url = document.URL;
+
+    // searchParams allows us to identily the sound and colour in the URL
+    //let paramaters = (new URL(url)).searchParams;
+  //  let sound = paramaters.get("sound");
+  //  let colour = paramaters.get("colour");
+
+    // let's display the sound and colour
+  //  document.body.style.backgroundColor = "#" + colour;
+
+  //  var source = document.getElementById('audioSource');
+  //  source.src = sound + '.wav';
+    //audio.play();--->
+
+ <button id="playAudio">Play</button>
+
+<script>
+
+    // This is the URL of the page, which contains the player parameters
+    let url = document.URL;
+
+    // searchParams allows us to identily the sound and colour in the URL
+    let paramaters = (new URL(url)).searchParams;
+    let sound = paramaters.get("sound");
+    let colour = paramaters.get("colour");
+
+    // let's display the sound and colour
+    document.body.style.backgroundColor = "#" + colour;
+
+    var source = document.getElementById('audioSource');
+    source.src = sound + '.mp3';
+
+    document.getElementById("playAudio").addEventListener("click", function(){
+      audio.play();
+    });
+
+    var px = 50; // Position x and y
+var py = 50;
+var vx = 0.0; // Velocity x and y
+var vy = 0.0;
+var updateRate = 1/60; // Sensor refresh rate
+
+function getAccel(){
+    DeviceMotionEvent.requestPermission().then(response => {
+        if (response == 'granted') {
+       // Add a listener to get smartphone orientation
+           // in the alpha-beta-gamma axes (units in degrees)
+            window.addEventListener('deviceorientation',(event) => {
+                // Expose each orientation angle in a more readable way
+                rotation_degrees = event.alpha;
+                frontToBack_degrees = event.beta;
+                leftToRight_degrees = event.gamma;
+
+                // Update velocity according to how tilted the phone is
+                // Since phones are narrower than they are long, double the increase to the x velocity
+                vx = vx + leftToRight_degrees * updateRate*2;
+                vy = vy + frontToBack_degrees * updateRate;
+
+                // Update position and clip it to bounds
+                px = px + vx*.5;
+                if (px > 98 || px < 0){
+                    px = Math.max(0, Math.min(98, px)) // Clip px between 0-98
+                    vx = 0;
+                }
+
+                py = py + vy*.5;
+                if (py > 98 || py < 0){
+                    py = Math.max(0, Math.min(98, py)) // Clip py between 0-98
+                    vy = 0;
+                }
+
+                dot = document.getElementsByClassName("indicatorDot")[0]
+                dot.setAttribute('style', "left:" + (px) + "%;" +
+                                              "top:" + (py) + "%;");
+
+            });
+        }
+    });
+}
+</script>
+
+
+
+</body>
+
+</html>

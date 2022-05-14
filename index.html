@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!---fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Erica+One&display=swap" rel="stylesheet">
+
+<!---using Fontawesome-->
+<script src="https://kit.fontawesome.com/a2d18f7895.js" crossorigin="anonymous"></script>
+
+    <link href="style.css" rel="stylesheet" />
+<!--css lightSlider--->
+    <link rel="stylesheet" href="css/lightslider.css">
+    <!---js  link-->
+    <script src="js/JQuery3.3.1.js"></script>
+    <script src="js/lightslider.js"></script>
+  <title>Hypnos Application</title>
+  </head>
+  <body>
+
+<!---Profile-->
+
+<!--<div class="profile" >
+   <div class="card">
+     <div class="card-bio">
+       <div class="img-wrapper">
+         <img src="image/avatar.png" alt="Gigi H." href="setting.html" />
+       </div>
+       <div class="person-info">
+         <h3>Gigi H.</h3>
+         <p>GOOD NIGHT!</p>
+       </div>
+     </div>
+   </div>
+</div>
+<br>-->
+<!--navigation-->
+  <!---logo-->
+  <nav class="header">
+  <a href="#" class="logo">HYPNOS</a>
+  <!--menu-btn-->
+        <input type="checkbox" class="menu-btn" id="menu-btn"/>
+        <label class="menu-icon" for="menu-btn">
+            <span class="nav-icon"></span>
+        </label>
+  <!--menu-->
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="music.html">Music</a></li>
+    <li><a href="#">Playlist</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="profile.html">Profile</a></li>
+  </ul>
+</nav>
+
+
+<!--Profile content-->
+  <div class="profile">
+     <img src="image/avatar.png" class="profile-small" alt="profile, Gigi H. ">
+     <h4> Sweet Dream </h4>
+     <h5>Angie T.</h5>
+   </div>
+
+
+<!--Recent mood-->
+    <section id="main">
+      <!---heading-->
+      <h1 class="mood-heading">Mood</h1>
+        <!--slider-->
+        <ul id="autoWidth" class="cs-hidden">
+            <!--slide-box-1-->
+            <li class="item-a">
+                <div class="moods-box">
+                    <!--img-->
+                    <div class="latest-b-img">
+                    <a href="player.html?sound=Preparingcoffee&colour=8e9b96">
+                      <img src="image/tranquility.png" alt="Tranquility"/></a>
+                    </div>
+                    <!--text-->
+                    <div class="latest-b-text">
+                        <strong>Tranquility</strong>
+                    </div>
+                </div>
+            </li>
+    <!--slide-box-2--->
+    <li class="item-b">
+        <div class="moods-box">
+            <!--img-->
+            <div class="latest-b-img">
+                <a href="player.html?sound=Birdinthejungle&colour=dfe9e6">
+                  <img src="image/peaceful.png" alt="Peaceful" /></a>
+            </div>
+            <!--text-->
+            <div class="latest-b-text">
+                <strong>Peaceful</strong>
+            </div>
+        </div>
+    </li>
+    <!--slide-box-3-------------->
+    <li class="item-c">
+        <div class="moods-box">
+            <!--img------>
+            <div class="latest-b-img">
+              <a href="player.html?sound=Milk&colour=df3163">
+                <img src="image/passion.png" alt="Passion" /></a>
+            </div>
+            <!--text-->
+            <div class="latest-b-text">
+                <strong>Passion</strong>
+            </div>
+        </div>
+    </li>
+    <!--slide-box-4-->
+    <li class="item-d">
+        <div class="moods-box">
+            <!--img----->
+            <div class="latest-b-img">
+              <a href="player.html?sound=waterdrop&colour=40916c">
+                <img src="image/focus.png" alt="Focus" /></a>
+            </div>
+            <!--text-->
+            <div class="latest-b-text">
+                <strong>Focus</strong>
+            </div>
+        </div>
+    </li>
+    <!--slide-box-5-->
+    <li class="item-e">
+        <div class="moods-box">
+            <!--img--->
+            <div class="latest-b-img">
+              <a href="player.html?sound=Preparingcoffee&colour=e1e2cf">
+                <img src="image/energy.png" alt="Energy" /></a>
+            </div>
+            <!--text-->
+            <div class="latest-b-text">
+                <strong>Energy</strong>
+            </div>
+        </div>
+    </li>
+    <!--slide-box-6-->
+    <li class="item-f">
+        <div class="moods-box">
+            <!--img--->
+            <div class="latest-b-img">
+              <a href="player.html?sound=Mixingcoffee&colour=EAD4C4">
+                <img src="image/enjoy.png" alt="Enjoy"/></a>
+            </div>
+            <!--text------->
+            <div class="latest-b-text">
+                <strong>Enjoy</strong>
+            </div>
+        </div>
+    </li>
+    <!--slide-box-7--------------->
+    <li class="item-g">
+        <div class="moods-box">
+            <!--img----->
+            <div class="latest-b-img">
+              <a href="player.html?sound=Birdinthejungle&colour=dfe9e6">
+                <img src="image/calm.png" alt="Calm"/></a>
+            </div>
+            <!--text-->
+            <div class="latest-b-text">
+                <strong>Calm</strong>
+            </div>
+        </div>
+    </li>
+    <!--slide-box-8-->
+    <li class="item-h">
+        <div class="moods-box">
+            <!--img-->
+            <div class="latest-b-img">
+              <a href="player.html?sound=Raining&colour=91a8d0">
+                <img src="image/serenity.png" alt="Serenity" /></a>
+            </div>
+            <!--text-->
+            <div class="latest-b-text">
+                <strong>Serenity</strong>
+            </div>
+        </div>
+    </li>
+          </ul>
+    </section>
+    <!---slider-script--->
+    <script>
+      $(document).ready(function() {
+        $('#autoWidth').lightSlider({
+            autoWidth:true,
+            loop:true,
+            onSliderLoad: function() {
+                $('#autoWidth').removeClass('cS-hidden');
+            }
+        });
+      });
+    </script>
+
+<!--Sound-->
+    <section id="sound">
+      <!---heading--->
+      <h1 class="sound-heading">Sound</h1>
+        <!--slider------------------->
+        <ul id="autoWidth2" class="cs-hidden">
+            <!--slide-box-1------------------>
+            <li class="item-a">
+                <div class="sound-box">
+                    <!--img-------->
+                    <div class="latest-b-img">
+                        <img alt="Water Drop" src="sound/waterdrop.jpg" onclick='check_sound("Mixingcoffee")'>
+                    </div>
+                    <!--text---------->
+                    <div class="latest-b-text">
+                        <strong>Water Drop</strong>
+                    </div>
+                </div>
+            </li>
+    <!--slide-box-2------------------>
+    <li class="item-b">
+        <div class="sound-box">
+            <!--img-------->
+            <div class="latest-b-img">
+                <img alt="raining" src="sound/raining.jpg" onclick='check_sound("waterdrop")' >
+            </div>
+            <!--text---------->
+            <div class="latest-b-text">
+                <strong>Raining</strong>
+            </div>
+        </div>
+    </li>
+    <!--slide-box-3------------------>
+    <li class="item-c">
+        <div class="sound-box">
+            <!--img-------->
+            <div class="latest-b-img">
+                <img alt="Preparing Coffee" src="sound/PreparingCoffee.jpg" onclick='check_sound("noise")'>
+            </div>
+            <!--text---------->
+            <div class="latest-b-text">
+                <strong>Preparing Coffee</strong>
+            </div>
+        </div>
+    </li>
+    <!--slide-box-4------------------>
+    <li class="item-d">
+        <div class="sound-box">
+            <!--img-------->
+            <div class="latest-b-img">
+                <img alt="Noise" src="sound/noise.jpg" onclick='check_sound("Birdinthejungle")'>
+            </div>
+            <!--text---------->
+            <div class="latest-b-text">
+                <strong>Noise</strong>
+            </div>
+        </div>
+    </li>
+    <!--slide-box-5------------------>
+    <li class="item-e">
+        <div class="sound-box">
+            <!--img-------->
+            <div class="latest-b-img">
+                <img alt="Mixing Coffee" src="sound/mixingcoffee.jpg" onclick='check_sound("boilingwaterfinal")' >
+            </div>
+            <!--text---------->
+            <div class="latest-b-text">
+                <strong>Mixing Coffee</strong>
+            </div>
+        </div>
+    </li>
+    <!--slide-box-6------------------>
+    <li class="item-f">
+        <div class="sound-box">
+            <!--img-------->
+            <div class="latest-b-img">
+                <img alt="Milk" src="sound/milk.jpg" onclick='check_sound("Milk")' >
+            </div>
+            <!--text---------->
+            <div class="latest-b-text">
+                <strong>Milk</strong>
+            </div>
+        </div>
+    </li>
+    <!--slide-box-7------------------>
+    <li class="item-g">
+        <div class="sound-box">
+            <!--img-------->
+            <div class="latest-b-img">
+                <img alt="Boiling Water" src="sound/boilingwater.jpg" onclick='check_sound("Birdinthejungle")' >
+            </div>
+            <!--text---------->
+            <div class="latest-b-text">
+                <strong>Boiling Water</strong>
+            </div>
+        </div>
+    </li>
+    <!--slide-box-8------------------>
+    <li class="item-h">
+        <div class="sound-box">
+            <!--img-------->
+            <div class="latest-b-img">
+                <img alt="Bird in the jungle" src="sound/birdinthejungle.jpg" onclick='check_sound("Raining")' >
+            </div>
+            <!--text---------->
+            <div class="latest-b-text">
+                <strong>Bird in the jungle</strong>
+            </div>
+        </div>
+    </li>
+          </ul>
+    </section>
+    <!---slider-script---->
+    <script>
+      $(document).ready(function() {
+        $('#autoWidth2').lightSlider({
+            autoWidth:true,
+            loop:true,
+            onSliderLoad: function() {
+                $('#autoWidth2').removeClass('cS-hidden');
+            }
+        });
+      });
+    </script>
+
+
+    <!---color------>
+    <section id="color">
+      <!---heading--->
+      <h1 class="color-heading">Color Soothing</h1>
+        <!--slider------------------->
+      <ul id="autoWidth3" class="cs-hidden">
+        <!--box-1------------------------>
+        <li class="item-a">
+        <div class="color-box">
+            <!--img------------>
+            <div class="latest-b-img color-img-1" onclick='check_colour("8e9b96")'></div>
+            <!--text--------->
+            <div class="latest-b-text">
+              <strong>Tranquility</strong>
+            </div>
+        </div>
+      </li>
+         <!--box-2------------------------>
+         <li class="item-b">
+         <div class="color-box">
+            <!--img------------>
+            <div class="latest-b-img color-img color-img-2" onclick='check_colour("9ab6c0")' ></div>
+              <!--text--------->
+            <div class="latest-b-text">
+              <strong>Peaceful</strong>
+            </div>
+        </div>
+      </li>
+         <!--box-3------------------------>
+         <li class="item-c">
+         <div class="color-box">
+            <!--img------------>
+            <div class="latest-b-img color-img-3" onclick='check_colour("df3163")' ></div>
+            <!--text--------->
+            <div class="latest-b-text">
+              <strong>Passion</strong>
+            </div>
+        </div>
+      </li>
+         <!--box-4------------------------>
+         <li class="item-d">
+         <div class="color-box">
+            <!--img------------>
+            <div class="latest-b-img color-img-4" onclick='check_colour("40916c")' ></div>
+            <!--text--------->
+            <div class="latest-b-text">
+              <strong>Focus</strong>
+            </div>
+        </div>
+      </li>
+         <!--box-5-->
+         <li class="item-e">
+         <div class="color-box">
+            <!--img-->
+            <div class="latest-b-img color-img-5" onclick='check_colour("e1e2cf")' ></div>
+            <!--text-->
+            <div class="latest-b-text">
+              <strong>Energy</strong>
+            </div>
+        </div>
+      </li>
+         <!--box-6-->
+         <li class="item-f">
+         <div class="color-box">
+            <!--img-->
+            <div class="latest-b-img color-img-6" onclick='check_colour("EAD4C4")' ></div>
+            <!--text-->
+            <div class="latest-b-text">
+              <strong>Enjoy</strong>
+            </div>
+        </div>
+      </li>
+         <!--box-7-->
+         <li class="item-g">
+         <div class="color-box">
+            <!--img-->
+            <div class="latest-b-img color-img color-img-7" onclick='check_colour("91a8d0")' ></div>
+            <!--text-->
+            <div class="latest-b-text">
+              <strong>Calm</strong>
+            </div>
+        </div>
+      </li>
+         <!--box-8-->
+         <li class="item-h">
+         <div class="color-box">
+            <!--img-->
+            <div class="latest-b-img color-img color-img-8" onclick='check_colour("9ab6c0")' ></div>
+            <!--text-->
+            <div class="latest-b-text">
+              <strong>Serenity</strong>
+            </div>
+        </div>
+      </li>
+      </ul>
+    </section>
+    <!---slider-script-->
+    <script>
+      $(document).ready(function() {
+        $('#autoWidth3').lightSlider({
+            autoWidth:true,
+            loop:true,
+            onSliderLoad: function() {
+                $('#autoWidth3').removeClass('cS-hidden');
+            }
+        });
+      });
+    </script>
+
+
+
+
+    <!--btns->
+        <!-footer-->
+        <footer>
+          <div class="footer-content">
+  <!--add all information-->
+  <h6>HYPNOS</h6>
+  <p>Hypnos is a responsice website designed for the user who suffers <br>
+    from poor sleep quality. This application offers personalized relaxing <br>
+    sounds and meditation guides before sleeping. Relaxing sounds include <br>
+    natural sounds and other electronic sounds with the right frequency.
+</p>
+<ul class="socials">
+   <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+   <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+   <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+   <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+   <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+</ul>
+<div class="footer-bottom">
+   <!-- add all information -->
+   <p>copyright &copy;2021 <a href="#">HypnosWebsite</a> </p>
+</div>
+</div>
+        </footer>
+
+
+<script>
+
+  let sound_selected = false;
+  let colour_selected = false;
+  let sound_name = "";
+  let colour_number = "";
+
+  function check_sound(name) {
+    sound_selected = ! sound_selected;
+    if (sound_selected == true) {
+      sound_name = name;
+    }
+
+    check_player();
+  }
+
+  function check_colour(number) {
+    colour_selected = ! colour_selected;
+    if (colour_selected == true) {
+      colour_number = number;
+    }
+
+    check_player();
+  }
+
+  function check_player() {
+    if ((sound_selected == true) && (colour_selected == true)) {
+      window.location.href = "player.html?sound="+ sound_name + "&colour=" + colour_number;
+    }
+  }
+</script>
+
+
+</body>
+</html>
